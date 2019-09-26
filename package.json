@@ -11,7 +11,8 @@
     "watch": "microbundle watch --format umd --entry demo/src/index.js --output demo/dist/bundle.js",
     "build": "microbundle --name Phenomenon --format es,umd --sourcemap false",
     "test": "npm run build && karmatic",
-    "prepare": "$npm_execpath run test"
+    "prepare": "$npm_execpath run test",
+    "dev": "concurrently \"tsc src/index -w --outDir dist --target es6\" \"npm start\""
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "http-server": "^0.11.1",
     "karmatic": "^1.3.1",
+    "livereload": "^0.8.1",
     "microbundle": "^0.11.0",
     "webpack": "^4.31.0"
   }

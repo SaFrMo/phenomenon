@@ -1,5 +1,5 @@
 // Import module from source
-import Phenomenon from '../../dist/phenomenon';
+import Phenomenon from '../../dist/index';
 
 // Import optional utils
 import { getRandom, rgbToHsl, rotateY } from './utils';
