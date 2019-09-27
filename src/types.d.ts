@@ -39,4 +39,5 @@ interface RendererProps {
   context?: object;
   contextType?: string;
   settings?: object;
+  debug?: boolean;
 }
