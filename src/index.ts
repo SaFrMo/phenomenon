@@ -70,13 +70,13 @@ export default class {
 
     // Create uniform mapping object
     this.uniformMap = {
-      float: (loc, val) => gl.uniform1f(loc, val),
-      vec2: (loc, val) => gl.uniform2fv(loc, val),
-      vec3: (loc, val) => gl.uniform3fv(loc, val),
-      vec4: (loc, val) => gl.uniform4fv(loc, val),
-      mat2: (loc, val) => gl.uniformMatrix2fv(loc, false, val),
-      mat3: (loc, val) => gl.uniformMatrix3fv(loc, false, val),
-      mat4: (loc, val) => gl.uniformMatrix4fv(loc, false, val),
+      float: (loc: WebGLUniformLocation, val: number) => gl.uniform1f(loc, val),
+      vec2: (loc: WebGLUniformLocation, val: Float32List) => gl.uniform2fv(loc, val),
+      vec3: (loc: WebGLUniformLocation, val: Float32List) => gl.uniform3fv(loc, val),
+      vec4: (loc: WebGLUniformLocation, val: Float32List) => gl.uniform4fv(loc, val),
+      mat2: (loc: WebGLUniformLocation, val: Float32List) => gl.uniformMatrix2fv(loc, false, val),
+      mat3: (loc: WebGLUniformLocation, val: Float32List) => gl.uniformMatrix3fv(loc, false, val),
+      mat4: (loc: WebGLUniformLocation, val: Float32List) => gl.uniformMatrix4fv(loc, false, val),
     };
 
     // Enable depth
