@@ -135,7 +135,7 @@ function addInstance() {
   let forward = true;
 
   // Add an instance to the renderer
-  phenomenon.add(count, {
+  return phenomenon.add(count, {
     attributes,
     multiplier,
     vertex,
@@ -175,6 +175,8 @@ function addInstance() {
   });
 }
 
-for (let i = 0; i < 10; i += 1) {
-  addInstance();
-}
+const instance = addInstance();
+instance.initTexture('./300x400.png');
+// for (let i = 0; i < 10; i += 1) {
+//   addInstance();
+// }

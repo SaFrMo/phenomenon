@@ -77,6 +77,7 @@ export default class {
       mat2: (loc: WebGLUniformLocation, val: Float32List) => gl.uniformMatrix2fv(loc, false, val),
       mat3: (loc: WebGLUniformLocation, val: Float32List) => gl.uniformMatrix3fv(loc, false, val),
       mat4: (loc: WebGLUniformLocation, val: Float32List) => gl.uniformMatrix4fv(loc, false, val),
+      // sampler2D: (loc: WebGLUniformLocation, val: GLint) => gl.uniformSampler(loc, val),
     };
 
     // Enable depth
@@ -185,7 +186,7 @@ export default class {
   /**
    * Add an instance to the renderer.
    */
-  add(key: string, settings: InstanceProps) {
+  add(key: string, settings: InstanceProps): Instance {
     if (typeof settings === 'undefined') {
       settings = { uniforms: {} };
     }
