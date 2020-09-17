@@ -134,7 +134,7 @@ An object containing overrides for parameters that are used when getting the Web
 | mode        | `number`   | `0`          | The way the instance will be rendered. Particles = 0, triangles = 4.        |
 | geometry    | `object`   | `{}`         | Vertices (and optional normals) of a model.                                 |
 | modifiers   | `object`   | `{}`         | Modifiers to alter the attributes data on initialize.                       |
-| onRender    | `function` | `undefined`  | A render hook that is invoked after every rendered frame.                   |
+| onRender    | `function` | `undefined`  | A render hook that is invoked after every rendered frame. Accepts this instance as an argument. |
 
 > Note: Less instances with a higher multiplier will be faster than more instances with a lower multiplier!
 
