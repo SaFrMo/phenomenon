@@ -126,8 +126,14 @@ An object containing overrides for parameters that are used when getting the Web
 
 | Name        | Value      | Default      | Description                                                                 |
 | ----------- | ---------- | ------------ | --------------------------------------------------------------------------- |
-| attributes  | `array`    | `[]`         | Values used in the program that are stored once, directly on the GPU. Each attribute uses the format ```{ name: 'name', data: (currentIndex, total) => [], size: 1 }```, where `data` is an array with initial value(s) and `size` is the length of that array.       |
-| uniforms    | `object`   | `{}`         | Values used in the program that can be updated on the fly. Each uniform uses the format ```name: { type: 'float|vec2|vec3|vec4|mat2|mat3|mat4', value: 0.0 }```, where `value` is a number or array with the initial value.                  |
+| attributes  | `array`    | `[]`         | Values used in the program that are stored once, directly on the GPU. Each attribute uses the format 
+```{ name: 'name', data: (currentIndex, total) => [], size: 1 }```
+where `data` is an array with initial value(s) and `size` is the length of that array.       |
+| uniforms    | `object`   | `{}`         | Values used in the program that can be updated on the fly. Each uniform uses the format 
+    
+    `name: { type: 'float|vec2|vec3|vec4|mat2|mat3|mat4', value: 0.0 }`
+    
+    where `value` is a number or array with the initial value.                  |
 | vertex      | `string`   | -            | The vertex shader is used to position the geometry in 3D space.             |
 | fragment    | `string`   | -            | The fragment shader is used to provide the geometry with color or texture.  |
 | multiplier  | `number`   | `1`          | The amount of duplicates that will be created for the same instance.        |
